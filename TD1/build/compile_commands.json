@@ -1,0 +1,20 @@
+[
+{
+  "directory": "D:/Imac/CoursA1/S2/Prog_Algo/TD1/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -Wall -Wextra -Wpedantic -pedantic-errors -o CMakeFiles\\main.dir\\src\\main.cpp.obj -c D:\\Imac\\CoursA1\\S2\\Prog_Algo\\TD1\\S1_TD8\\TD8\\src\\main.cpp",
+  "file": "D:/Imac/CoursA1/S2/Prog_Algo/TD1/S1_TD8/TD8/src/main.cpp",
+  "output": "CMakeFiles/main.dir/src/main.cpp.obj"
+},
+{
+  "directory": "D:/Imac/CoursA1/S2/Prog_Algo/TD1/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -Wall -Wextra -Wpedantic -pedantic-errors -o CMakeFiles\\main.dir\\src\\fraction.cpp.obj -c D:\\Imac\\CoursA1\\S2\\Prog_Algo\\TD1\\S1_TD8\\TD8\\src\\fraction.cpp",
+  "file": "D:/Imac/CoursA1/S2/Prog_Algo/TD1/S1_TD8/TD8/src/fraction.cpp",
+  "output": "CMakeFiles/main.dir/src/fraction.cpp.obj"
+},
+{
+  "directory": "D:/Imac/CoursA1/S2/Prog_Algo/TD1/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -Wall -Wextra -Wpedantic -pedantic-errors -o CMakeFiles\\main.dir\\src\\utils.cpp.obj -c D:\\Imac\\CoursA1\\S2\\Prog_Algo\\TD1\\S1_TD8\\TD8\\src\\utils.cpp",
+  "file": "D:/Imac/CoursA1/S2/Prog_Algo/TD1/S1_TD8/TD8/src/utils.cpp",
+  "output": "CMakeFiles/main.dir/src/utils.cpp.obj"
+}
+]
