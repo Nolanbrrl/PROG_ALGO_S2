@@ -1,1 +1,0 @@
-# PROG_ALGO_S2
