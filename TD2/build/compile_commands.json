@@ -1,0 +1,14 @@
+[
+{
+  "directory": "D:/Imac/CoursA1/S2/Prog_Algo/TD2/build",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -std=gnu++17 -Wall -Wextra -Wpedantic -pedantic-errors -o CMakeFiles\\exo1.dir\\src\\exo1.cpp.obj -c D:\\Imac\\CoursA1\\S2\\Prog_Algo\\TD2\\src\\exo1.cpp",
+  "file": "D:/Imac/CoursA1/S2/Prog_Algo/TD2/src/exo1.cpp",
+  "output": "CMakeFiles/exo1.dir/src/exo1.cpp.obj"
+},
+{
+  "directory": "D:/Imac/CoursA1/S2/Prog_Algo/TD2/build",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -std=gnu++17 -Wall -Wextra -Wpedantic -pedantic-errors -o CMakeFiles\\exo2.dir\\src\\exo2.cpp.obj -c D:\\Imac\\CoursA1\\S2\\Prog_Algo\\TD2\\src\\exo2.cpp",
+  "file": "D:/Imac/CoursA1/S2/Prog_Algo/TD2/src/exo2.cpp",
+  "output": "CMakeFiles/exo2.dir/src/exo2.cpp.obj"
+}
+]
