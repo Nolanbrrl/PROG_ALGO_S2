@@ -1,0 +1,3 @@
+C:\mingw64\bin\cmake.exe -E rm -f CMakeFiles\exo2.dir/objects.a
+C:\mingw64\bin\ar.exe qc CMakeFiles\exo2.dir/objects.a @CMakeFiles\exo2.dir\objects1.rsp
+C:\mingw64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\exo2.dir/objects.a -Wl,--no-whole-archive -o D:\Imac\CoursA1\S2\Prog_Algo\PROG_ALGO_S2\TD5\bin\exo2.exe -Wl,--out-implib,libexo2.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\exo2.dir\linkLibs.rsp
