@@ -58,15 +58,50 @@ int Card::hash(){
     {
     case CardValue::Ace:
         break;
-    
-    default:
+    case CardValue::Two:
+        valeur += 1;
         break;
+    case CardValue::Three:
+        valeur += 2;
+        break;
+    case CardValue::Four:
+        valeur += 3;
+        break;
+    case CardValue::Five:
+        valeur += 4;
+        break;
+    case CardValue::Six:
+        valeur += 5;
+        break;
+    case CardValue::Seven:
+        valeur += 6;
+        break;
+    case CardValue::Eight:
+        valeur += 7;
+        break;
+    case CardValue::Nine:
+        valeur += 8;
+        break;
+    case CardValue::Ten:
+        valeur += 9;
+        break;
+    case CardValue::Jack:
+        valeur += 10;
+        break;
+    case CardValue::Queen:
+        valeur += 11;
+        break;
+    case CardValue::King:
+        valeur += 12;
+        break;    
+    
     }
+    return valeur;
 }
 namespace std {
     template<>
     struct hash<Card> {
-        size_t operator()(Card const& card) const {
+        size_t operator()(Card card) const {
             return card.hash();
         }
     };
@@ -93,7 +128,52 @@ bool operator==(const Card carte1, const Card carte2)
     
 }
 
-int main(){
+std::string card_name(Card const& card) {
+    std::string name {};
 
+    unsigned int card_value {(static_cast<unsigned int>(card.value)+2) % 14};
+
+    if (card_value < 10) {
+        name += '0' + card_value;
+    }else if (card_value == 10) {
+        name += "10";
+    }else if (card_value == 11) {
+        name += 'V';
+    }else if (card_value == 12) {
+        name += 'Q';
+    }else if (card_value == 13) {
+        name += 'K';
+    }
+
+    name += " of ";
+
+    if (card.kind == CardKind::Heart) {
+        name += "Heart";
+    }else if (card.kind == CardKind::Diamond) {
+        name += "Diamond";
+    }else if (card.kind == CardKind::Club) {
+        name += "Club";
+    }else if (card.kind == CardKind::Spade) {
+        name += "Spade";
+    }
+    return name;
+}
+
+int main(){
+    std::vector<Card> cartes {get_cards(100)};
+    std::unordered_map<int, int> nombre_carte_dans_liste {};
+    for (int i = 0; i < 52; i++)
+    {
+        nombre_carte_dans_liste.insert({i, 0});
+    }
+    
+    for (Card c : cartes)
+    {
+        // pour chaque carte parmi les 100 générées, on prend leur hash unique et on augmente de 1 le compteur en deuxieme position dans la map
+        int i = nombre_carte_dans_liste.at(c.hash()).second;
+        nombre_carte_dans_liste.at(c.hash()).pushback(i);
+    }
+    
+    
     return 0;
 }
