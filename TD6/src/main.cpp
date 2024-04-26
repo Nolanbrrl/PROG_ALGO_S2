@@ -1,7 +1,7 @@
 #include <vector>
 #include <algorithm>
 #include <iostream>
-#include <node.hpp>
+#include "node.hpp"
 
 void pretty_print_left_right(Node const& node, std::string const& prefix, bool is_left) {
     if (node.right) {
@@ -18,6 +18,9 @@ void pretty_print_left_right(Node const& node) {
 }
 
 int main(){
-
+    Node* racine = create_node(0);
+    std::cout << racine->is_leaf() << std::endl;
+    racine->insert(12);
+    std::cout << racine->right->value << std::endl;
     return 0;
 }

@@ -20,6 +20,6 @@ file(GLOB_RECURSE SRC_FILES CONFIGURE_DEPENDS "src/*.cpp")
 # add_executable(TD5exo1 TD5/TD5exo1.cpp)
 
 
-add_executable(main src/main.cpp)
+add_executable(main ${SRC_FILES})
 
 
