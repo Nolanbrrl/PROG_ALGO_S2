@@ -111,7 +111,8 @@ std::vector<Card> get_cards(size_t const size) {
     std::vector<Card> cards;
     cards.reserve(size);
     for (size_t i {0}; i < size; ++i) {
-        cards.emplace_back(static_cast<CardKind>(rand() % 4), static_cast<CardValue>(rand() % 13));
+        Card c{static_cast<CardKind>(rand() % 4), static_cast<CardValue>(rand() % 13)};
+        cards.push_back(c);
     }
     return cards;
 }
@@ -169,11 +170,13 @@ int main(){
     
     for (Card c : cartes)
     {
-        // pour chaque carte parmi les 100 générées, on prend leur hash unique et on augmente de 1 le compteur en deuxieme position dans la map
-        int i = nombre_carte_dans_liste.at(c.hash()).second;
-        nombre_carte_dans_liste.at(c.hash()).pushback(i);
+        nombre_carte_dans_liste.at(c.hash())++;
     }
     
+    for (int i = 0; i < 52; i++)
+    {
+        std::cout << "La carte " << i << " est " << nombre_carte_dans_liste.at(i) << " fois" << std::endl;
+    }
     
     return 0;
 }
