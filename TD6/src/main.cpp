@@ -22,5 +22,8 @@ int main(){
     std::cout << racine->is_leaf() << std::endl;
     racine->insert(12);
     std::cout << racine->right->value << std::endl;
+
+    racine->right->insert(5);
+    std::cout << "L'arbre fait " << racine->height() << " de taille" <<  std::endl;
     return 0;
 }

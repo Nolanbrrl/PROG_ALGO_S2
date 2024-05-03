@@ -9,6 +9,8 @@ struct Node {
     bool is_leaf();
     void insert(int value);
     int height() const;
+    void Node::delete_childs();
+    void Node::display_infixe() const;
 };
 
 Node* create_node(int value);

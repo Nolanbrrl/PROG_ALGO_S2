@@ -55,3 +55,20 @@ int Node::height() const{
     }
     
 }
+
+void Node::delete_childs(){
+    if (left)
+    {
+        left->delete_childs();
+        delete left;
+    }
+    if (right)
+    {
+        right->delete_childs();
+        delete right;
+    }
+}
+
+void Node::display_infixe() const{
+    
+}
