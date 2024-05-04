@@ -3,6 +3,8 @@
 #include <utility>
 #include <algorithm>
 #include <iostream>
+#include <stack>
+#include <queue>
 #include "utils.hpp"
 
 namespace Graph {
@@ -65,6 +67,23 @@ Graph::WeightedGraph adjency_list_from_adjency_matrix(std::vector<std::vector<in
 }
 
 void Graph::WeightedGraph::print_DFS(int const start) const{
+    std::stack<int> pile {};
+    std::vector<int> visite {};
+    bool est_dans_la_pile {0};
+    pile.push(start);
+    int emplacement_actuel {start};
+    while (pile.empty() == 0)
+    {
+        std::cout << " ( " << pile.top() << " ) puis " << std::endl;
+        pile.pop();
+        for (int i = 0; i < adjacency_list.at(emplacement_actuel).size(); i++)
+        {
+            pile.push(adjacency_list.at(emplacement_actuel)[i].to);
+        }
+        emplacement_actuel = pile.top();
+        
+    }
+    
 
 }
 
