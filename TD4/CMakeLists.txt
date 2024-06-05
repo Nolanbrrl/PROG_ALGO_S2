@@ -23,4 +23,8 @@ file(GLOB_RECURSE SRC_FILES CONFIGURE_DEPENDS "src/*.cpp")
 # add_executable(exo1 src/exo1.cpp)
 add_executable(exo2 src/exo2.cpp)
 
+add_executable(exo1 src/exo1.cpp)
+
+add_executable(exo3 src/exo3.cpp)
+
 

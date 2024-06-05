@@ -3,12 +3,13 @@
 cmake_policy(SET CMP0009 NEW)
 
 # SRC_FILES at CMakeLists.txt:17 (file)
-file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "D:/Imac/CoursA1/S2/Prog_Algo/TD4/src/*.cpp")
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "D:/Imac/CoursA1/S2/Prog_Algo/PROG_ALGO_S2/TD4/src/*.cpp")
 set(OLD_GLOB
-  "D:/Imac/CoursA1/S2/Prog_Algo/TD4/src/exo1.cpp"
-  "D:/Imac/CoursA1/S2/Prog_Algo/TD4/src/exo2.cpp"
+  "D:/Imac/CoursA1/S2/Prog_Algo/PROG_ALGO_S2/TD4/src/exo1.cpp"
+  "D:/Imac/CoursA1/S2/Prog_Algo/PROG_ALGO_S2/TD4/src/exo2.cpp"
+  "D:/Imac/CoursA1/S2/Prog_Algo/PROG_ALGO_S2/TD4/src/exo3.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
-  file(TOUCH_NOCREATE "D:/Imac/CoursA1/S2/Prog_Algo/TD4/build/CMakeFiles/cmake.verify_globs")
+  file(TOUCH_NOCREATE "D:/Imac/CoursA1/S2/Prog_Algo/PROG_ALGO_S2/TD4/build/CMakeFiles/cmake.verify_globs")
 endif()

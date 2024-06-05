@@ -56,10 +56,10 @@ RM = C:\mingw64\bin\cmake.exe -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\Imac\CoursA1\S2\Prog_Algo\TD4
+CMAKE_SOURCE_DIR = D:\Imac\CoursA1\S2\Prog_Algo\PROG_ALGO_S2\TD4
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\Imac\CoursA1\S2\Prog_Algo\TD4\build
+CMAKE_BINARY_DIR = D:\Imac\CoursA1\S2\Prog_Algo\PROG_ALGO_S2\TD4\build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Imac\CoursA1\S2\Prog_Algo\TD4\build\CMakeFiles D:\Imac\CoursA1\S2\Prog_Algo\TD4\build\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Imac\CoursA1\S2\Prog_Algo\PROG_ALGO_S2\TD4\build\CMakeFiles D:\Imac\CoursA1\S2\Prog_Algo\PROG_ALGO_S2\TD4\build\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Imac\CoursA1\S2\Prog_Algo\TD4\build\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Imac\CoursA1\S2\Prog_Algo\PROG_ALGO_S2\TD4\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -112,7 +112,7 @@ preinstall/fast:
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -P D:\Imac\CoursA1\S2\Prog_Algo\TD4\build\CMakeFiles\VerifyGlobs.cmake
+	$(CMAKE_COMMAND) -P D:\Imac\CoursA1\S2\Prog_Algo\PROG_ALGO_S2\TD4\build\CMakeFiles\VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
@@ -128,6 +128,56 @@ exo2: cmake_check_build_system
 exo2/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\exo2.dir\build.make CMakeFiles/exo2.dir/build
 .PHONY : exo2/fast
+
+#=============================================================================
+# Target rules for targets named exo1
+
+# Build rule for target.
+exo1: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 exo1
+.PHONY : exo1
+
+# fast build rule for target.
+exo1/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\exo1.dir\build.make CMakeFiles/exo1.dir/build
+.PHONY : exo1/fast
+
+#=============================================================================
+# Target rules for targets named exo3
+
+# Build rule for target.
+exo3: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 exo3
+.PHONY : exo3
+
+# fast build rule for target.
+exo3/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\exo3.dir\build.make CMakeFiles/exo3.dir/build
+.PHONY : exo3/fast
+
+src/exo1.obj: src/exo1.cpp.obj
+.PHONY : src/exo1.obj
+
+# target to build an object file
+src/exo1.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\exo1.dir\build.make CMakeFiles/exo1.dir/src/exo1.cpp.obj
+.PHONY : src/exo1.cpp.obj
+
+src/exo1.i: src/exo1.cpp.i
+.PHONY : src/exo1.i
+
+# target to preprocess a source file
+src/exo1.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\exo1.dir\build.make CMakeFiles/exo1.dir/src/exo1.cpp.i
+.PHONY : src/exo1.cpp.i
+
+src/exo1.s: src/exo1.cpp.s
+.PHONY : src/exo1.s
+
+# target to generate assembly for a file
+src/exo1.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\exo1.dir\build.make CMakeFiles/exo1.dir/src/exo1.cpp.s
+.PHONY : src/exo1.cpp.s
 
 src/exo2.obj: src/exo2.cpp.obj
 .PHONY : src/exo2.obj
@@ -153,6 +203,30 @@ src/exo2.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\exo2.dir\build.make CMakeFiles/exo2.dir/src/exo2.cpp.s
 .PHONY : src/exo2.cpp.s
 
+src/exo3.obj: src/exo3.cpp.obj
+.PHONY : src/exo3.obj
+
+# target to build an object file
+src/exo3.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\exo3.dir\build.make CMakeFiles/exo3.dir/src/exo3.cpp.obj
+.PHONY : src/exo3.cpp.obj
+
+src/exo3.i: src/exo3.cpp.i
+.PHONY : src/exo3.i
+
+# target to preprocess a source file
+src/exo3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\exo3.dir\build.make CMakeFiles/exo3.dir/src/exo3.cpp.i
+.PHONY : src/exo3.cpp.i
+
+src/exo3.s: src/exo3.cpp.s
+.PHONY : src/exo3.s
+
+# target to generate assembly for a file
+src/exo3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\exo3.dir\build.make CMakeFiles/exo3.dir/src/exo3.cpp.s
+.PHONY : src/exo3.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -161,10 +235,18 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... exo1
 	@echo ... exo2
+	@echo ... exo3
+	@echo ... src/exo1.obj
+	@echo ... src/exo1.i
+	@echo ... src/exo1.s
 	@echo ... src/exo2.obj
 	@echo ... src/exo2.i
 	@echo ... src/exo2.s
+	@echo ... src/exo3.obj
+	@echo ... src/exo3.i
+	@echo ... src/exo3.s
 .PHONY : help
 
 
@@ -176,7 +258,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -P D:\Imac\CoursA1\S2\Prog_Algo\TD4\build\CMakeFiles\VerifyGlobs.cmake
+	$(CMAKE_COMMAND) -P D:\Imac\CoursA1\S2\Prog_Algo\PROG_ALGO_S2\TD4\build\CMakeFiles\VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
