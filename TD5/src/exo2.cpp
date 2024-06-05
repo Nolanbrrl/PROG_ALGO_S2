@@ -33,15 +33,6 @@ std::vector<std::pair<std::string, float>> get_robots_fix(size_t size) {
     return robots_fix;
 }
 
-bool is_in_noms_robots(std::vector<std::string> noms_robots, std::string nom_robot){
-    for (std::string nom : noms_robots)
-    {
-        if(nom == nom_robot){
-            return true;
-        }
-    }
-    return false;
-}
 
 std::unordered_map<std::string, std::vector<float>> robots_fixes_map(std::vector<std::pair<std::string, float>> const& robots_fixes){
     std::unordered_map<std::string, std::vector<float>> map_reparations_robots {};
@@ -51,7 +42,7 @@ std::unordered_map<std::string, std::vector<float>> robots_fixes_map(std::vector
     for (int i = 0; i < robots_fixes.size(); i++)
     {
         
-        if (is_in_noms_robots(noms_robots, robots_fixes[i].first)){
+        if (map_reparations_robots.find(robots_fixes[i].first) != nullptr){
             map_reparations_robots.at(robots_fixes[i].first).push_back(robots_fixes[i].second);
         }
         else {
