@@ -5,6 +5,7 @@
 #include "ScopedTimer.hpp"
 
 
+
 template<typename T>
 std::ostream& operator<<(std::ostream& os, std::vector<T> const& array)
 {
@@ -123,6 +124,44 @@ int dichotomie(std::vector<int> vec, int const& valeur){
 
 }
 
+void counting_sort(std::vector<int> & vec, int const max){
+    std::vector<std::pair<int,int>> compteur_occurences_valeur{};
+    std::vector<int> tableau_trie {};
+    for (int i = 0; i <= max; i++)
+    {
+        int compteur {0};
+        for (int j : vec)
+        {
+            if (j == i)
+            {
+                compteur++;
+            }
+            
+        }
+        
+        compteur_occurences_valeur.push_back({i,compteur});
+
+    }
+
+    for (std::pair<int,int> p : compteur_occurences_valeur)
+    {
+        if (p.second > 0)
+        {
+            for (int i = 0; i < p.second; i++)
+            {
+                tableau_trie.push_back(p.first);
+            }
+            
+        }
+        
+    }
+    
+    for (int i = 0; i < vec.size(); i++)
+    {
+        vec[i] = tableau_trie[i];
+    }
+    
+}
 
 int main (){
 
@@ -148,6 +187,11 @@ int main (){
     std::cout << "L'indice de la valeur cherchee 6 du tableau 4 est : " << dichotomie(tableau4, 6) << std::endl;
     std::cout << "L'indice de la valeur cherchee 10 du tableau 5 est : " << dichotomie(tableau5, 10) << std::endl;
 
+    std::vector<int> vec3 = {2, 8, 8, 9, 3, 1, 3};
+    counting_sort(vec3, 9);
+    std::cout << "Le tableau apres counting sort donne : " << std::endl;
+    std::cout << vec3 << std::endl;
+
     {
         ScopedTimer timer("chrono sort basique");
         std::vector<float> array = generate_random_vector(100, 100);
@@ -160,6 +204,9 @@ int main (){
         merge_sort(array2);
     }
     
+    // On remarque que les deux algorithmes ont un temps d'execution différent
+    // L'ordre de grandeur joue sur le temps d'exécution
+    // Avec plus de données, le récursif est nettement plus efficace
 
     return 0;
 }
