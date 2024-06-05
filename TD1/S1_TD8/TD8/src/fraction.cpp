@@ -62,12 +62,7 @@ bool operator!=(Fraction const& f1, Fraction const& f2){
 bool operator< (const Fraction &f1, const Fraction &f2){
     simplify(f1);
     simplify(f2);
-    if(f1.numerator < f2.numerator && f1.denominator >= f2.denominator){
-        return true;
-    }
-    else {
-        return false;
-    }
+    return ((float)(f1.numerator / f1.denominator) < (float)(f2.numerator / f2.denominator));
 }
 
 bool operator> (const Fraction &f1, const Fraction &f2){
@@ -141,5 +136,5 @@ float Fraction::to_float(){
 }
 
 Fraction::operator float(){
-    return Fraction::to_float();
+    return to_float();
 };

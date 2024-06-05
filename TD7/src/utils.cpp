@@ -71,16 +71,30 @@ void Graph::WeightedGraph::print_DFS(int const start) const{
     std::vector<int> visite {};
     bool est_dans_la_pile {0};
     pile.push(start);
+    visite.push_back(start);
     int emplacement_actuel {start};
     while (pile.empty() == 0)
     {
-        std::cout << " ( " << pile.top() << " ) puis " << std::endl;
+        for (int j = 0; j < visite.size(); j++)
+        {
+            if (visite[j] == emplacement_actuel)
+            {
+                est_dans_la_pile == 1;
+            }
+        }
+        if (est_dans_la_pile == 0)
+        {
+            std::cout << " ( " << pile.top() << " ) puis " << std::endl;
+            
+        }
         pile.pop();
         for (int i = 0; i < adjacency_list.at(emplacement_actuel).size(); i++)
         {
             pile.push(adjacency_list.at(emplacement_actuel)[i].to);
+            visite.push_back(adjacency_list.at(emplacement_actuel)[i].to);
         }
         emplacement_actuel = pile.top();
+        est_dans_la_pile = {0};
         
     }
     

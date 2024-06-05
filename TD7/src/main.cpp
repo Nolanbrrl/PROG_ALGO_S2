@@ -32,7 +32,7 @@ int main(){
     switch (resultat)
     {
     case 1:
-        std::cout << "Les arbres sont égaux" << std::endl;
+        std::cout << "Les arbres sont egaux" << std::endl;
         break;
     
     case 0:
@@ -40,5 +40,6 @@ int main(){
         break;
     }
 
+    graphe1.print_DFS(7);
     return 0;
 }
