@@ -40,6 +40,29 @@ int main(){
         break;
     }
 
-    graphe1.print_DFS(7);
+    // graphe1.print_DFS(7);
+    // graphe1.print_BFS(7);
+
+    std::unordered_map<int, std::pair<float, int>> djikstra_map {};
+    Graph::WeightedGraph graphe_djikstra {};
+    graphe_djikstra.add_vertex(1);
+    graphe_djikstra.add_vertex(9);
+    graphe_djikstra.add_vertex(7);
+    graphe_djikstra.add_vertex(4);
+    graphe_djikstra.add_vertex(2);
+    graphe_djikstra.add_directed_edge(1, 9, 1);
+    graphe_djikstra.add_directed_edge(1, 7, 4);
+    graphe_djikstra.add_directed_edge(9, 7, 1);
+    graphe_djikstra.add_directed_edge(9, 4, 1);
+    graphe_djikstra.add_directed_edge(9, 2, 5);
+    graphe_djikstra.add_directed_edge(7, 2, 1);
+    graphe_djikstra.add_directed_edge(4, 2, 3);
+    graphe_djikstra.add_directed_edge(4, 1, 3);
+    std::unordered_map<int, std::pair<float, int>> chemin{Graph::dijkstra(graphe_djikstra, 1, 2)};
+    for (auto [vextex, pair] : chemin)
+    {
+        std::cout << "Du noeud 1 à : " << vextex << " : " << pair.first << " via " << pair.second << std::endl;
+    }
+    
     return 0;
 }
